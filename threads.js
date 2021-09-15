@@ -36,3 +36,6 @@ crypto.pbkdf2('a', 'b', 100000, 512, 'sha512', () => {
 crypto.pbkdf2('a', 'b', 100000, 512, 'sha512', () => {
   console.log('5:', Date.now() - start)
 })
+
+// All fs module function are handled in the threadpool. And some of the crypto stuff.
+// Taks running in the threadpool are the pendingOperations in the exampel array
