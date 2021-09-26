@@ -1,0 +1,23 @@
+{
+  "name": "src",
+  "version": "1.0.0",
+  "description": "## What consists NodeJS NodeJS consists of 50% JS (v8 engine) and 50% c++(libuv library).",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KentaKodashima/AdvancedNodeJS.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KentaKodashima/AdvancedNodeJS/issues"
+  },
+  "homepage": "https://github.com/KentaKodashima/AdvancedNodeJS#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

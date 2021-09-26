@@ -17,3 +17,16 @@ Node event loop is a single threaded. However, some of Node framework/std lib ar
 
 ## Libuv thread pool
 Libuv has a thread pool that consists of 4 threads by default. It computes some expensive tasks in the threads instead of Node event loop.
+
+## Improving Node performance
+### Use Node in 'Cluster' mode (recommended)
+The cluster mode is used to have multiple copies of Node that are all running the server inside them. We cannot run Node in multiple threads, but by starting up multiple copies, we get multiple instances of event loop.
+
+### Use worder threads (experimental)
+Worker threads are used to do performannce work inside the app. They use the thread pool from libuv.
+
+### Requests and express server
+Whenever a request comes into the Node server, it gets processed in one single thread that contains the event loop, and the server generates a response.
+
+### Cluster manager
+The cluster manager is responsible for modeling the health of each instance of the app.
