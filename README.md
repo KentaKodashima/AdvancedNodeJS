@@ -30,3 +30,16 @@ Whenever a request comes into the Node server, it gets processed in one single t
 
 ### Cluster manager
 The cluster manager is responsible for modeling the health of each instance of the app.
+
+### Benchmarking
+https://www.skenz.it/cs/ab
+
+```
+ab -c 1=2 -n 1=2 localhost:3000/
+```
+
+- -n 2 : Execute 3 time
+- -c 2: 2 concurrent accesses
+
+### Over allocating instannces
+Creating many instances causes a problem depending on the hardware's CPU limit. For instance, if you have 6 clusters and there are 6 incoming requests, your machine's CPU tries to handle all requests at the same time. However, it would be overwork for your CPU ulenss your machine has 6 cores. This results in slower response speed.
